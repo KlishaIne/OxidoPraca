@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bcb3c7c-3655-44ac-b0a2-a6a054c90356" name="Changes" comment="Version 1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9bcb3c7c-3655-44ac-b0a2-a6a054c90356" name="Changes" comment="Version 1.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +33,7 @@
 }]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/KlishaIne/OxidoProjekt",
+    "url": "https://github.com/KlishaIne/OxidoPraca.git",
     "accountId": "1917a8aa-0356-472c-a25c-4d0b664f370e"
   }
 }]]></component>
@@ -87,7 +85,7 @@
       <updated>1731498710765</updated>
       <workItem from="1731498712680" duration="1235000" />
       <workItem from="1731499965686" duration="431000" />
-      <workItem from="1731500424308" duration="12584000" />
+      <workItem from="1731500424308" duration="12890000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1.0">
       <option name="closed" value="true" />
