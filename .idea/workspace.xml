@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bcb3c7c-3655-44ac-b0a2-a6a054c90356" name="Changes" comment="">
+    <list default="true" id="9bcb3c7c-3655-44ac-b0a2-a6a054c90356" name="Changes" comment="Version 1.0">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -27,6 +27,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/KlishaIne/OxidoProjekt",
+    "accountId": "1917a8aa-0356-472c-a25c-4d0b664f370e"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.venv/.env" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.venv/Generuj.py" root0="FORCE_HIGHLIGHTING" />
@@ -74,12 +80,25 @@
       <updated>1731498710765</updated>
       <workItem from="1731498712680" duration="1235000" />
       <workItem from="1731499965686" duration="431000" />
-      <workItem from="1731500424308" duration="11134000" />
+      <workItem from="1731500424308" duration="11481000" />
     </task>
+    <task id="LOCAL-00001" summary="Version 1.0">
+      <option name="closed" value="true" />
+      <created>1731596997523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731596997523</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.0" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$Generuj.coverage" NAME="Generuj Coverage Results" MODIFIED="1731596628255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
