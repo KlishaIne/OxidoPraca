@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Instrukcja uruchomienia aplikacji</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { color: #2c3e50; }
+        pre { background-color: #f4f4f4; padding: 10px; overflow-x: auto; }
+        code { background-color: #f4f4f4; padding: 2px 4px; }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul { margin-left: 20px; }
+        hr { border: none; border-top: 1px solid #ccc; margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <h1>Instrukcja uruchomienia aplikacji</h1>
+    <p>Ta instrukcja pomoże Ci zainstalować wszystkie niezbędne komponenty oraz uruchomić aplikację, która pobiera treść artykułu, konwertuje go na kod HTML, generuje obrazy i tworzy podgląd artykułu.</p>
+    <hr>
+    <h2>Spis treści</h2>
+    <ol>
+        <li><a href="#wymagania">Wymagania systemowe</a></li>
+        <li><a href="#python">Instalacja Pythona 3.13</a></li>
+        <li><a href="#pip">Instalacja pip</a></li>
+        <li><a href="#biblioteki">Instalacja wymaganych bibliotek</a></li>
+        <li><a href="#api">Konfiguracja klucza API OpenAI</a></li>
+        <li><a href="#uruchomienie">Uruchomienie aplikacji</a></li>
+        <li><a href="#dodatkowe">Dodatkowe informacje</a></li>
+    </ol>
+    <hr>
+
+    <h2 id="wymagania">1. Wymagania systemowe</h2>
+    <ul>
+        <li>System operacyjny: Windows, macOS lub Linux</li>
+        <li>Połączenie z internetem</li>
+        <li>Klucz API OpenAI z dostępem do modeli GPT-3.5/GPT-4 oraz API Obrazów</li>
+    </ul>
+
+    <h2 id="python">2. Instalacja Pythona 3.13</h2>
+    <p><strong>Uwaga:</strong> Upewnij się, że instalujesz Python w wersji 3.13 lub nowszej.</p>
+    <h3>Windows:</h3>
+    <ol>
+        <li>Przejdź na stronę <a href="https://www.python.org/downloads/windows/">Python Releases for Windows</a>.</li>
+        <li>Pobierz instalator "Windows installer (64-bit)" dla wersji Python 3.13.</li>
+        <li>Uruchom pobrany instalator.</li>
+        <li><strong>Ważne:</strong> Podczas instalacji zaznacz opcję <strong>"Add Python 3.13 to PATH"</strong>.</li>
+        <li>Postępuj zgodnie z instrukcjami instalatora.</li>
+    </ol>
+
+    <h3>macOS:</h3>
+    <ol>
+        <li>Przejdź na stronę <a href="https://www.python.org/downloads/macos/">Python Releases for macOS</a>.</li>
+        <li>Pobierz instalator "macOS 64-bit installer" dla wersji Python 3.13.</li>
+        <li>Uruchom pobrany plik <code>.pkg</code> i postępuj zgodnie z instrukcjami.</li>
+    </ol>
+
+    <h3>Linux:</h3>
+    <ul>
+        <li>Możesz użyć menedżera pakietów swojej dystrybucji lub pobrać źródła z <a href="https://www.python.org/downloads/source/">oficjalnej strony Pythona</a>.</li>
+        <li>Przykład dla Ubuntu/Debiana:</li>
+    </ul>
+    <pre><code>sudo apt update
+sudo apt install python3.13</code></pre>
+
+    <h2 id="pip">3. Instalacja <code>pip</code></h2>
+    <p><code>pip</code> jest narzędziem do zarządzania pakietami Pythona. W nowszych wersjach Pythona <code>pip</code> jest już zainstalowany.</p>
+
+    <h3>Sprawdź, czy <code>pip</code> jest zainstalowany:</h3>
+    <pre><code>pip --version</code></pre>
+    <p>Jeśli otrzymasz informację o wersji <code>pip</code>, możesz przejść do następnego kroku.</p>
+
+    <h3>Instalacja <code>pip</code>:</h3>
+    <p>Jeśli <code>pip</code> nie jest zainstalowany, wykonaj poniższe kroki.</p>
+
+    <h4>Windows:</h4>
+    <ol>
+        <li>Pobierz plik <a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>.</li>
+        <li>Otwórz wiersz poleceń i uruchom:</li>
+    </ol>
+    <pre><code>python get-pip.py</code></pre>
+
+    <h4>macOS/Linux:</h4>
+    <ol>
+        <li>Otwórz terminal i uruchom:</li>
+    </ol>
+    <pre><code>curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py</code></pre>
+
+    <h2 id="biblioteki">4. Instalacja wymaganych bibliotek</h2>
+    <p>Aplikacja wymaga dwóch bibliotek: <code>openai</code> i <code>requests</code>.</p>
+
+    <h3>Instalacja za pomocą <code>pip</code>:</h3>
+    <ol>
+        <li>Otwórz wiersz poleceń lub terminal.</li>
+        <li>Przejdź do katalogu z aplikacją <code>generate_article.py</code>.</li>
+        <li>Wykonaj polecenie:</li>
+    </ol>
+    <pre><code>pip install openai requests</code></pre>
+
+    <h2 id="api">5. Konfiguracja klucza API OpenAI</h2>
+    <p>Aby aplikacja mogła korzystać z usług OpenAI, musisz ustawić zmienną środowiskową <code>OPENAI_API_KEY</code> z Twoim kluczem API.</p>
+
+    <h3>Uzyskanie klucza API:</h3>
+    <ol>
+        <li>Zarejestruj się lub zaloguj na <a href="https://platform.openai.com/">OpenAI Platform</a>.</li>
+        <li>Przejdź do <a href="https://platform.openai.com/account/api-keys">strony kluczy API</a>.</li>
+        <li>Wygeneruj nowy klucz API.</li>
+    </ol>
+
+    <h3>Ustawienie zmiennej środowiskowej:</h3>
+
+    <h4>Windows:</h4>
+    <ol>
+        <li>Otwórz menu Start i wpisz <strong>"Zmienne środowiskowe"</strong>, wybierz <strong>"Edytuj zmienne środowiskowe systemu"</strong>.</li>
+        <li>Kliknij <strong>"Zmienne środowiskowe"</strong>.</li>
+        <li>W sekcji <strong>"Zmienne użytkownika"</strong> kliknij <strong>"Nowa..."</strong>.</li>
+        <li>Wprowadź:
+            <ul>
+                <li><strong>Nazwa zmiennej:</strong> <code>OPENAI_API_KEY</code></li>
+                <li><strong>Wartość zmiennej:</strong> <em>TWÓJ_KLUCZ_API</em></li>
+            </ul>
+        </li>
+        <li>Zatwierdź zmiany.</li>
+    </ol>
+
+    <h4>macOS/Linux:</h4>
+    <ol>
+        <li>Otwórz terminal.</li>
+        <li>Edytuj plik powłoki (np. <code>.bash_profile</code>, <code>.bashrc</code> lub <code>.zshrc</code>):</li>
+    </ol>
+    <pre><code>nano ~/.bash_profile</code></pre>
+    <ol start="3">
+        <li>Dodaj linię:</li>
+    </ol>
+    <pre><code>export OPENAI_API_KEY="TWÓJ_KLUCZ_API"</code></pre>
+    <ol start="4">
+        <li>Zapisz plik i zamknij edytor (w nano: <code>Ctrl + O</code>, <code>Enter</code>, <code>Ctrl + X</code>).</li>
+        <li>Załaduj zmiany:</li>
+    </ol>
+    <pre><code>source ~/.bash_profile</code></pre>
+
+    <h2 id="uruchomienie">6. Uruchomienie aplikacji</h2>
+
+    <h3>Kroki:</h3>
+    <ol>
+        <li><strong> Uruchom plik <code>Run.bat</code></strong>
+
+        </li>
+
+
+        <li><strong>Czekaj na zakończenie działania skryptu:</strong>
+            <ul>
+                <li>Skrypt pobierze treść artykułu, wygeneruje kod HTML, wygeneruje obrazy i zapisze pliki.</li>
+                <li>W trakcie działania mogą pojawić się komunikaty informujące o postępie.</li>
+            </ul>
+        </li>
+        <li><strong>Sprawdź wyniki:</strong>
+            <ul>
+                <li>W katalogu powinny pojawić się pliki:
+                    <ul>
+                        <li><code>szablon.html</code> – pusty szablon HTML.</li>
+                        <li><code>podglad.html</code> – pełny podgląd artykułu z wygenerowanymi obrazami.</li>
+                    </ul>
+                </li>
+                <li>Folder <code>images</code> zawierający wygenerowane obrazy.</li>
+            </ul>
+        </li>
+        <li><strong>Otwórz plik <code>podglad.html</code> w przeglądarce:</strong>
+            <ul>
+                <li>Dwukrotnie kliknij plik lub otwórz go za pomocą przeglądarki internetowej.</li>
+                <li>Powinieneś zobaczyć artykuł z wbudowanymi obrazami.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2 id="dodatkowe">7. Dodatkowe informacje</h2>
+
+    <h3>Uwagi:</h3>
+    <ul>
+        <li><strong>Koszty i limity:</strong>
+            <ul>
+                <li>Generowanie obrazów za pomocą API OpenAI może wiązać się z kosztami.</li>
+                <li>Upewnij się, że masz wystarczające środki na koncie OpenAI.</li>
+            </ul>
+        </li>
+        <li><strong>Problemy z generowaniem obrazów:</strong>
+            <ul>
+                <li>Jeśli obrazy nie zostaną wygenerowane, upewnij się, że masz dostęp do API Obrazów OpenAI.</li>
+                <li>Sprawdź, czy klucz API jest poprawnie ustawiony.</li>
+            </ul>
+        </li>
+        <li><strong>Zmiana ustawień skryptu:</strong>
+            <ul>
+                <li>Możesz edytować plik <code>generate_article.py</code>, aby dostosować ustawienia, takie jak rozmiar obrazów czy model AI.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Kontakt:</h3>
+    <p>Jeśli napotkasz problemy lub masz pytania, skontaktuj się z autorem aplikacji.</p>
+
+    <hr>
+    <h2>Dziękujemy za skorzystanie z naszej aplikacji!</h2>
+</body>
+</html>
+
+

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bcb3c7c-3655-44ac-b0a2-a6a054c90356" name="Changes" comment="Version 1.0">
+      <change afterPath="$PROJECT_DIR$/project_html_generator.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -57,6 +59,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python.Generuj.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -89,6 +92,8 @@
       <workItem from="1731499965686" duration="431000" />
       <workItem from="1731500424308" duration="13577000" />
       <workItem from="1731668668153" duration="460000" />
+      <workItem from="1731669267466" duration="4043000" />
+      <workItem from="1731673682202" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1.0">
       <option name="closed" value="true" />
